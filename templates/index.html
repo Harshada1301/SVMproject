@@ -115,7 +115,7 @@ footer{text-align:center;font-size:11px;opacity:.5;margin-top:22px}
 const form=document.getElementById('form'),btn=document.getElementById('btn'),box=document.getElementById('result');
 form.addEventListener('submit',async e=>{
   e.preventDefault();
-  btn.classList.add('loading');btn.textContent='⏳ Thinking...';box.className='result';box.style.display='none';
+  btn.classList.add('loading');btn.textContent='⏳ Thinking...';box.className='result';box.style.display=' ';
   const body={age:age.value,gender:gender.value,region:region.value,occupation:occupation.value,income:income.value};
   try{
     const r=await fetch('/predict',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
